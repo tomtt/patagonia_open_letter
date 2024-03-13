@@ -53,7 +53,7 @@ group :development do
   gem "capistrano", "~> 3.10", require: false
   gem "capistrano-rails", "~> 1.3", require: false
   gem "capistrano-rbenv"
-  gem "capistrano3-puma"
+  gem "capistrano3-puma", github: "seuros/capistrano-puma"
   gem "capistrano-master-key"
   gem "term-ansicolor"
 end
