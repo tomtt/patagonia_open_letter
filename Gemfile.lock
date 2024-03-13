@@ -98,14 +98,16 @@ GEM
     capistrano-master-key (1.0.2)
       capistrano (~> 3.11)
       sshkit (~> 1.17)
-    capistrano-puma (0.2.3)
-      capistrano (>= 3.0)
     capistrano-rails (1.6.3)
       capistrano (~> 3.1)
       capistrano-bundler (>= 1.1, < 3)
     capistrano-rbenv (2.2.0)
       capistrano (~> 3.1)
       sshkit (~> 1.3)
+    capistrano3-puma (5.2.0)
+      capistrano (~> 3.7)
+      capistrano-bundler
+      puma (>= 4.0, < 6.0)
     concurrent-ruby (1.2.3)
     connection_pool (2.4.1)
     crass (1.0.6)
@@ -180,7 +182,7 @@ GEM
     popper_js (2.11.8)
     psych (5.1.2)
       stringio
-    puma (6.4.2)
+    puma (5.6.8)
       nio4r (~> 2.0)
     racc (1.7.3)
     rack (3.0.9.1)
@@ -290,9 +292,9 @@ DEPENDENCIES
   bootstrap (~> 5.3)
   capistrano (~> 3.10)
   capistrano-master-key
-  capistrano-puma
   capistrano-rails (~> 1.3)
   capistrano-rbenv
+  capistrano3-puma
   debug
   hotwire-rails (~> 0.1.3)
   importmap-rails (~> 2.0)
