@@ -17,6 +17,8 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rben
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
 set :rbenv_roles, :all # default value
 
+set :master_key_local_path, "/Users/me/created/projects/patagonia/open_letter/config/master.key"
+
 # Default value for :format is :airbrussh.
 # set :format, :airbrussh
 

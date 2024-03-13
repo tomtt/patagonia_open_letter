@@ -54,6 +54,7 @@ group :development do
   gem "capistrano-rails", "~> 1.3", require: false
   gem "capistrano-rbenv"
   gem "capistrano-puma"
+  gem "capistrano-master-key"
   gem "term-ansicolor"
 end
 

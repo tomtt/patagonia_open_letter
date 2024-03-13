@@ -34,7 +34,10 @@ require "capistrano/rbenv"
 # require "capistrano/rails/migrations"
 # require "capistrano/passenger"
 
-require 'capistrano/puma'
+require "capistrano/puma"
+
+require "capistrano/master_key"
+
 install_plugin Capistrano::Puma
 install_plugin Capistrano::Puma::Systemd
 
