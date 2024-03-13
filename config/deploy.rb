@@ -11,7 +11,7 @@ set :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 # Default deploy_to directory is /var/www/my_app_name
 set :deploy_to, "/home/deployer/smallscalefisher"
 
-set :rbenv_type, :system # or :user, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
+set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
 set :rbenv_ruby, "3.0.6"
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} RBENV_VERSION=#{fetch(:rbenv_ruby)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 set :rbenv_map_bins, %w{rake gem bundle ruby rails}
