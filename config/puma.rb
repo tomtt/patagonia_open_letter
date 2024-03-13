@@ -7,6 +7,9 @@
 # Any libraries that use thread pools should be configured to match
 # the maximum value specified for Puma. Default is set to 5 threads for minimum
 # and maximum; this matches the default thread size of Active Record.
+
+require "pathname"
+
 max_threads_count = ENV.fetch("RAILS_MAX_THREADS") { 5 }
 min_threads_count = ENV.fetch("RAILS_MIN_THREADS") { max_threads_count }
 threads min_threads_count, max_threads_count
@@ -30,6 +33,14 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
+
+def shared_dir
+  # @path is defined for current instance of Puma::DSL and is the path of the config/puma.rb file
+  # e.g.: /home/deployer/my_site/current/config/puma.rb
+  # We use this hack to change this to the shared directory
+  # e.g.: /home/deployer/my_site/shared
+  Pathname.new(@path).dirname.dirname.dirname.join("shared")
+end
 
 # Set up socket location
 bind "unix://#{shared_dir}/sockets/puma.sock"
