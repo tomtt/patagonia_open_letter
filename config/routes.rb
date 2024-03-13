@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   get "sortable", to: "pages#sortable"
+  get "bootstrap_playground", to: "pages#bootstrap_playground"
   get "tech", to: "pages#tech"
-  # Defines the root path route ("/")
   root "pages#home"
 end
