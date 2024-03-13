@@ -1,0 +1,13 @@
+ul.sortable {
+  list-style-type: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+  li {
+    background-color: #ccc;
+    border: solid 1px #999;
+    border-radius: 10.5rem;
+    margin-top: 1rem;
+    padding: 1rem;
+    max-width: 200px;
+  }
+}
