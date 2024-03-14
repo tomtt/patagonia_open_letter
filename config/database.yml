@@ -79,6 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: open_letter_production
-  username: open_letter
-  password: <%= ENV["OPEN_LETTER_DATABASE_PASSWORD"] %>
+  database: smallscalefisher_db
+  username: smallscalefisher
+  password: <%= ENV["SMALLSCALEFISHER_DATABASE_PASSWORD"] %>
