@@ -34,16 +34,22 @@ environment ENV.fetch("RAILS_ENV") { "development" }
 # Specifies the `pidfile` that Puma will use.
 pidfile ENV.fetch("PIDFILE") { "tmp/pids/server.pid" }
 
-def shared_dir
-  # @path is defined for current instance of Puma::DSL and is the path of the config/puma.rb file
-  # e.g.: /home/deployer/my_site/current/config/puma.rb
-  # We use this hack to change this to the shared directory
-  # e.g.: /home/deployer/my_site/shared
-  Pathname.new(@path).dirname.dirname.dirname.join("shared")
+def current_dir
+  if defined? Rails
+    Rails.root
+  else
+    Pathname.new(@path).dirname.dirname
+  end
+end
+
+def sockets_dir
+  # As part of the deploy we ensure that the tmp/sockets directory
+  # in the rails root is linked to shared/tmp/sockets.
+  current_dir.join("tmp", "sockets")
 end
 
 # Set up socket location
-bind "unix://#{shared_dir}/sockets/puma.sock"
+bind "unix://#{sockets_dir}/puma.sock"
 
 # Allow puma to be restarted by `bin/rails restart` command.
 plugin :tmp_restart
