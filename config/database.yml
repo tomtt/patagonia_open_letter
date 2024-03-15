@@ -80,5 +80,4 @@ test:
 production:
   <<: *default
   database: smallscalefisher_db
-  username: smallscalefisher
-  password: <%= ENV["SMALLSCALEFISHER_DATABASE_PASSWORD"] %>
+  username: deployer
