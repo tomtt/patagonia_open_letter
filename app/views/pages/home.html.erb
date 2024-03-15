@@ -1,1 +1,31 @@
-<p>This will become the small scale fisher open letter page</p>
+<script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
+<script>
+  const defaults = {
+    spread: 360,
+    ticks: 100,
+    gravity: 0.01,
+    decay: 0.89,
+    startVelocity: 30,
+  };
+
+  function shoot() {
+    confetti({
+      ...defaults,
+      particleCount: 20,
+      scalar: 2,
+      shapes: ["emoji"],
+      shapeOptions: {
+        emoji: {
+          value: ["🐟", "🐠", "🐡", "🎣"]
+        },
+      },
+    });
+  }
+
+  setTimeout(shoot, 0);
+  setTimeout(shoot, 100);
+  setTimeout(shoot, 200);
+</script>
+
+<p>This will become the small scale fisher open letter page 🐡</p>
+
