@@ -79,5 +79,5 @@ test:
 #
 production:
   <<: *default
-  database: smallscalefisher_db
+  database: makefishingfair_db
   username: deployer

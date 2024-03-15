@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.18.0"
 
-set :application, "smallscalefisher"
+set :application, "makefishingfair"
 set :repo_url, "git@github.com:tomtt/open_letter.git"
 
 
@@ -9,7 +9,7 @@ set :repo_url, "git@github.com:tomtt/open_letter.git"
 set :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, "/home/deployer/smallscalefisher"
+set :deploy_to, "/home/deployer/makefishingfair"
 
 set :rbenv_type, :user # or :system, or :fullstaq (for Fullstaq Ruby), depends on your rbenv setup
 set :rbenv_ruby, "3.0.6"
@@ -33,7 +33,7 @@ set :master_key_local_path, "/Users/me/created/projects/patagonia/open_letter/co
 # append :linked_files, "config/database.yml", 'config/master.key'
 
 # Default value for linked_dirs is []
-append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "vendor", "storage", ".bundle"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system", "storage", ".bundle"
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
