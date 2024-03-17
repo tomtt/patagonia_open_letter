@@ -1,11 +1,21 @@
 <div class="row">
   <div class="col-12">
     <h2>Supporting organisations</h2>
-    <% @supporting_organisations.each do |supporting_organisation| %>
-      <div>
-        <div><%= supporting_organisation.name %></div>
-        <div><%= image_tag supporting_organisation.logo.variant(:small) %></div>
+      <% @supporting_organisations.each_with_index do |supporting_organisation, i| %>
+        <% if i % 2 == 0 %>
+          <div class="row bg-light shadow mb-4">
+          <% end %>
+        <div class="col-4">
+          <%= supporting_organisation.name %>
+        </div>
+        <div class="col-2 mr-4">
+          <%= image_tag supporting_organisation.logo.variant(:thumb) %>
+        </div>
+        <% if i % 2 == 1 %>
+            </div>
+          <% end %>
       <% end %>
+    </div>
   </div>
 </div>
 
