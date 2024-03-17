@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_17_145507) do
   end
 
   create_table "signatories", force: :cascade do |t|
-    t.text "organisation"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
