@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-12">
+    <h2>Supporting organisations</h2>
+    <% @supporting_organisations.each do |supporting_organisation| %>
+      <div>
+        <div><%= supporting_organisation.name %></div>
+        <div><%= image_tag supporting_organisation.logo.variant(:small) %></div>
+      <% end %>
+  </div>
+</div>
+
