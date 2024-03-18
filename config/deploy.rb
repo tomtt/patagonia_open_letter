@@ -2,7 +2,7 @@
 lock "~> 3.18.0"
 
 set :application, "makefishingfair"
-set :repo_url, "git@github.com:tomtt/open_letter.git"
+set :repo_url, "git@github.com:tomtt/make_fishing_fair.git"
 
 
 # Default branch is :master
