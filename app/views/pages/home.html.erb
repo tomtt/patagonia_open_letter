@@ -1,6 +1,5 @@
 <div class="container shadow rounded text-muted bg-light">
   <h1 class="justify-content-center">Make Fishing Fair Open Letter</h1>
-  <p>This will become the make fishing fair open letter page 🐡</p>
   <%= @markdown.render(@open_letter_content).html_safe %>
   <%= render partial: "signatories", locals: { signatories: @signatories } %>
   <%= render partial: "supporting_organisations", locals: { supporting_organisations: @supporting_organisations } %>
