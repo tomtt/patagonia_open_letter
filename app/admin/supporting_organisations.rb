@@ -1,5 +1,5 @@
 ActiveAdmin.register SupportingOrganisation do
-  permit_params :name, :logo
+  permit_params :name, :url, :logo
 
   form partial: 'form'
   # See permitted parameters documentation:
