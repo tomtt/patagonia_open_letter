@@ -1,23 +1,19 @@
 <h2>Supporting organisations</h2>
-<div class="card-deck">
+<div>
   <% @supporting_organisations.each do |supporting_organisation| %>
-    <div class="card mr-2 mb-2 shadow" style="width: 18rem; display: inline-block;">
-      <%= link_to_if(
-        supporting_organisation.url.present?,
-        image_tag(supporting_organisation.logo.variant(:displayed_logo), class: "p-4 card-img-top", alt: "logo #{supporting_organisation.name}"),
-        supporting_organisation.url
-      )
-    %>
-  <div class="card-body">
     <%= link_to_if(
-        supporting_organisation.url.present?,
-        simple_format(supporting_organisation.name),
-        supporting_organisation.url,
-        target: "_",
-        class: "link-dark"
-        )
-      %>
-  </div>
-  </div>
+      supporting_organisation.url.present?,
+      image_tag(supporting_organisation.logo, alt: "logo #{supporting_organisation.name}"),
+      supporting_organisation.url
+    )
+    %>
+    <%= link_to_if(
+      supporting_organisation.url.present?,
+      simple_format(supporting_organisation.name),
+      supporting_organisation.url,
+      target: "_",
+      class: "link-dark"
+    )
+    %>
   <% end %>
 </div>
