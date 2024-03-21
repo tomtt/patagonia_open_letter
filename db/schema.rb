@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_03_21_155416) do
+ActiveRecord::Schema[7.1].define(version: 2024_03_21_163952) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -71,6 +71,13 @@ ActiveRecord::Schema[7.1].define(version: 2024_03_21_155416) do
   create_table "content_blocks", force: :cascade do |t|
     t.string "key"
     t.text "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "letter_translations", force: :cascade do |t|
+    t.string "language_name"
+    t.string "language_code"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,8 @@
+<%= semantic_form_for [:admin, @letter_translation], builder: ActiveAdmin::FormBuilder do |f| %>
+  <%= f.inputs do %>
+    <%= f.input :language_name %>
+    <%= f.input :language_code %>
+    <%= f.input :pdf, as: :file %>
+    <%= f.actions %>
+  <% end %>
+<% end %>
