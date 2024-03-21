@@ -61,6 +61,7 @@ group :development do
   gem "capistrano3-puma", github: "seuros/capistrano-puma"
   gem "capistrano-master-key"
   gem "term-ansicolor"
+  gem "hotwire-livereload"
 end
 
 
