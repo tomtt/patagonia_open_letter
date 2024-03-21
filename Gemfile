@@ -73,3 +73,5 @@ gem "activeadmin"
 gem "devise"
 gem "activeadmin_simplemde"
 gem "redcarpet"
+gem "acts_as_list"
+
