@@ -3,7 +3,7 @@
   <% @supporting_organisations.each do |supporting_organisation| %>
     <%= link_to_if(
       supporting_organisation.url.present?,
-      image_tag(supporting_organisation.logo, alt: "logo #{supporting_organisation.name}"),
+      image_tag(supporting_organisation.logo.variant(:displayed_logo), alt: "logo #{supporting_organisation.name}"),
       supporting_organisation.url
     )
     %>

@@ -3,5 +3,5 @@
   <%= markdown_render(@page_introduction_content) %>
   <%= markdown_render(@open_letter_content) %>
   <%= render partial: "signatories", locals: { signatories: @signatories } %>
-  <%= render partial: "supporting_organisations", locals: { supporting_organisations: @supporting_organisations } %>
+  <%= render partial: "supporting_organisations", locals: { supporting_organisations: @supporting_organisations, logo_variant: @logo_variant } %>
 </div>

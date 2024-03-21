@@ -10,7 +10,7 @@ class SupportingOrganisation < ApplicationRecord
   has_one_attached :logo do |attachable|
      attachable.variant :thumb, resize_to_limit: [100, 100], preprocessed: true
      attachable.variant :small, resize_to_limit: [300, 200], preprocessed: true
-     attachable.variant :displayed_logo, resize_to_limit: [300, 100], preprocessed: true
-     attachable.variant :fixed_height, resize_to_limit: [nil, 200], preprocessed: true
+     attachable.variant :original, preprocessed: true
+     attachable.variant :displayed_logo, resize_to_limit: [600, 400], preprocessed: true
   end
 end

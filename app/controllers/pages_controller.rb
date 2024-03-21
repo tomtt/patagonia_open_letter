@@ -7,4 +7,8 @@ class PagesController < ApplicationController
     @supporting_organisations = SupportingOrganisation.all
     @signatories = Signatory.all
   end
+
+  def supporting_organisations
+    @supporting_organisations = SupportingOrganisation.all
+  end
 end

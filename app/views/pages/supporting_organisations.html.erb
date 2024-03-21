@@ -1,0 +1,22 @@
+<div class="container shadow rounded text-muted bg-light">
+  <h1>This is a page to help admin see relative size of uploaded logos</h1>
+  <h2>Supporting organisations</h2>
+  <div>
+    <% @supporting_organisations.each do |supporting_organisation| %>
+      <%= link_to_if(
+        supporting_organisation.url.present?,
+        image_tag(supporting_organisation.logo.variant(:original), alt: "logo #{supporting_organisation.name}"),
+        supporting_organisation.url
+      )
+    %>
+  <%= link_to_if(
+    supporting_organisation.url.present?,
+    simple_format(supporting_organisation.name),
+    supporting_organisation.url,
+    target: "_",
+    class: "link-dark"
+  )
+%>
+  <% end %>
+  </div>
+</div>
