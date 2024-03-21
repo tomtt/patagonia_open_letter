@@ -7,5 +7,14 @@ class LetterTranslation < ApplicationRecord
     ["pdf_attachment", "pdf_blob"]
   end
 
+  def description
+    "Letter Translation #{language_name} (#{language_code})"
+  end
+
+  def pdf_preview
+    return nil unless pdf.previewable?
+    pdf&.preview({})
+  end
+
   has_one_attached :pdf
 end
