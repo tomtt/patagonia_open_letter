@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
     <%= hotwire_livereload_tags if Rails.env.development? %>
+    <%= favicon_link_tag asset_path('favicon.ico') %>
   </head>
 
   <body>
