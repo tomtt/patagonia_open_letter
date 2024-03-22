@@ -1,0 +1,6 @@
+<h2>Open Letter Translation</h2>
+<ul>
+  <% @letter_translations.each do |letter_translation| %>
+    <li><%=button_to(letter_translation.language_name, rails_blob_path(letter_translation.pdf, disposition: "attachment"), method: :get) %></li>
+  <% end %>
+</ul>
