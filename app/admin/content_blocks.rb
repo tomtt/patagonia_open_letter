@@ -1,6 +1,8 @@
 ActiveAdmin.register ContentBlock do
   permit_params :key, :content
 
+  show title: :admin_description
+
   form do |f|
     f.inputs 'ContentBlock' do
       f.input :key

@@ -7,8 +7,8 @@ class LetterTranslation < ApplicationRecord
     ["pdf_attachment", "pdf_blob"]
   end
 
-  def description
-    "Letter Translation #{language_name} (#{language_code})"
+  def admin_description
+    "#{language_name} (#{language_code})"
   end
 
   def pdf_preview

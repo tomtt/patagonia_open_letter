@@ -7,7 +7,7 @@ ActiveAdmin.register LetterTranslation do
 
   end
 
-  show title: :description do
+  show title: :admin_description do
     image_tag(url_for(letter_translation.pdf_preview))
   end
 end
