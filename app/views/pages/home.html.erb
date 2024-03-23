@@ -4,5 +4,9 @@
   <%= markdown_render(@open_letter_content) %>
   <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
   <%= render partial: "signatories", locals: { signatories: @signatories } %>
-  <%= render partial: "supporting_organisations", locals: { supporting_organisations: @supporting_organisations, logo_variant: @logo_variant } %>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+      <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
+    </div>
+  </div>
 </div>

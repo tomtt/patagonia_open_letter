@@ -1,0 +1,27 @@
+<!-- Carousel -->
+<div id="supporting_organisations_carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="1500">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <% @supporting_organisations.size.times do |index| %>
+      <button type="button" data-bs-target="#supporting_organisations_carousel" data-bs-slide-to="<%= index %>"<%= ' class="active"'.html_safe if index.zero? %>></button>
+    <% end %>
+  </div>
+
+  <!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <% @supporting_organisations.each_with_index.map do |supporting_organisation, index| %>
+      <div class="carousel-item<%= ' active' if index.zero? %>">
+        <%= image_tag(supporting_organisation.logo.variant(:displayed_logo), alt: "logo #{supporting_organisation.name}", class: "d-block", style: "width:100%; height:300px") %>
+      </div>
+    <% end %>
+  </div>
+
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#supporting_organisations_carousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#supporting_organisations_carousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
