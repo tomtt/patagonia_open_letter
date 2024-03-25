@@ -1,0 +1,19 @@
+<div class="carousel-image">
+  <%= link_to_if(
+    supporting_organisation.url.present?,
+    tag.div(
+      [
+        tag.span(class: "helper"),
+        image_tag(
+          supporting_organisation.logo.variant(:carousel),
+          class: "logo-image",
+          alt: "logo #{supporting_organisation.name}"
+        )
+      ].join.html_safe,
+      class: "logo-image-container"
+    ),
+    supporting_organisation.url,
+    target: "_"
+  )
+%>
+</div>

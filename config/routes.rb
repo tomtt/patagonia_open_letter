@@ -9,7 +9,6 @@ Rails.application.routes.draw do
 
   get "sortable", to: "pages#sortable"
   get "bootstrap_playground", to: "pages#bootstrap_playground"
-  get "supporting_organisations", to: "pages#supporting_organisations"
   get "tech", to: "pages#tech"
   root "pages#home"
 end

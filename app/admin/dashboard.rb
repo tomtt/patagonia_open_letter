@@ -19,7 +19,6 @@ ActiveAdmin.register_page "Dashboard" do
               end
             end
           end
-          para link_to("Check relative logo sizes", supporting_organisations_path)
         end
         panel "Signatories" do
           para "There are #{ Signatory.count } signatories"

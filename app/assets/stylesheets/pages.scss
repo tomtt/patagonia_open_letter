@@ -1,3 +1,48 @@
+.parallax-header {
+  background: #fff;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.2),
+    rgba(255, 255, 255, 0.2)
+  ),
+  image-url("fishing_backdrop.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 550px;
+}
+
+.header-content {
+  background-color: rgba(0,0,0,0.5);
+  background: linear-gradient(192deg, rgba(0, 56, 141, 0.7), rgba(221, 175, 53, 0.7));
+  border-radius: 10px;
+  padding: 1em;
+}
+
+.parallax-header .container {
+  padding-top: 230px;
+}
+
+header h1 {
+  color: white;
+  text-shadow: 2px 2px #10182fff;
+}
+
+.content {
+  margin-top: -80px;
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+  border-radius: 10px;
+  background-color: #f1f6f7ff;
+}
+
+.full-page {
+  background: #eee;
+  background: linear-gradient(rgba(0, 56, 141, 0.2), rgba(221, 175, 53, 0.2));
+}
+
 blockquote {
   margin-left: 2em;
   margin-right: 2em;
@@ -10,4 +55,48 @@ blockquote {
   p {
     margin-bottom: 0;
   }
+}
+
+.logo-image-container {
+  height: 200px;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.logo-carousel {
+  max-height: 200px;
+  background-color: #e8e8ff;
+  img {
+    vertical-align: middle;
+  }
+}
+
+.helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.tns-outer {
+  position: relative;
+}
+
+[data-controls] {
+  border: 0;
+  padding: 0;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  z-index: 1;
+  background: transparent;
+}
+[data-controls="prev"] {
+  left: 20px;
+}
+[data-controls="next"] {
+  right: 20px;
+}
+[data-action="stop"] {
+  display: none;
 }

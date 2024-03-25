@@ -1,12 +1,12 @@
-<div class="container shadow rounded text-muted bg-light">
-  <h1 class="justify-content-center">Make Fishing Fair Open Letter</h1>
-  <%= markdown_render(@page_introduction_content) %>
-  <%= markdown_render(@open_letter_content) %>
-  <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
-  <%= render partial: "signatories", locals: { signatories: @signatories } %>
-  <div class="row">
-    <div class="col-lg-8 offset-lg-2">
-      <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
-    </div>
+<style></style>
+
+<div class="container-float shadow rounded text-muted full-page">
+  <%= render partial: "header" %>
+  <div class="container content">
+    <%= markdown_render(@page_introduction_content) %>
+    <%= markdown_render(@open_letter_content) %>
+    <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
+    <%= render partial: "signatories", locals: { signatories: @signatories } %>
   </div>
+  <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
 </div>
