@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     @open_letter_content = content_for_key("open_letter")
     @supporting_organisations = SupportingOrganisation.all
     @signatories = Signatory.all
-    @letter_translations = LetterTranslation.all
+    @letter_translations = LetterTranslation.all.has_pdf
   end
 
   def supporting_organisations

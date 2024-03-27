@@ -17,4 +17,5 @@ class LetterTranslation < ApplicationRecord
   end
 
   has_one_attached :pdf
+  scope :has_pdf, -> { joins(:pdf_attachment) }
 end
