@@ -17,6 +17,10 @@
     <!--[if (lt IE 9)]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script><![endif]-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
 
+    <% if Rails.env.production? %>
+      <%= javascript_include_tag "https://www.googletagmanager.com/gtag/js?id=G-PWGZFD1BM3" %>
+      <meta name="google-analytics-id" content ="G-PWGZFD1BM3" />
+    <% end %>
 
   </head>
 
