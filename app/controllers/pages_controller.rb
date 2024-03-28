@@ -4,6 +4,7 @@ class PagesController < ApplicationController
   def home
     @page_introduction_content = content_for_key("page_introduction")
     @open_letter_content = content_for_key("open_letter")
+    @the_ask_content = content_for_key("the_ask")
     @supporting_organisations = SupportingOrganisation.all
     @signatories = Signatory.all
     @letter_translations = LetterTranslation.all.has_pdf

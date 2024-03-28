@@ -1,6 +1,10 @@
 <div class="row">
   <div class="col-12">
-    <h2>Signatories list</h2>
+    <p>About signatories: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere, tellus sed aliquet tristique, orci dolor consequat nunc, eget placerat tellus lectus sed erat. Donec scelerisque, dui et dapibus sollicitudin, tortor magna lacinia metus, sit amet efficitur metus erat in justo.</p>
+    <a href="mailto:info@makefishingfair.org?subject=Why we would like to become a make fishing fair signatory" target="_">
+      <button type="button" class="btn btn-primary">Email us to become a signatory</button>
+    </a>
+    <h2 class="mt-2">These organisations have signed their support for the make fishing fair open letter:</h2>
     <ul>
       <% @signatories.each do |signatory| %>
         <li><%= signatory.name %></li>
