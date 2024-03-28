@@ -51,13 +51,8 @@ header h1 {
 }
 
 #letter-translations-accordion {
-  .accordion-header {
-    background-color: green;
-    .accordion-button {
-      background-color: #000;
-      background: linear-gradient(184deg, rgba(0, 56, 141, 0.7), rgba(221, 175, 53, 0.7));
-      color: white;
-    }
+  .accordion-button {
+    color: white;
   }
 
   form.button_to {
