@@ -6,13 +6,34 @@ ActiveAdmin.register SupportingOrganisation do
   show do
     attributes_table do
       row :name
-      row :logo do |supporting_organisation|
-        image_tag supporting_organisation.logo.variant(:carousel)
+      row :logo do |x|
+        if x.logo.attached?
+          image_tag x.logo.variant(:carousel)
+        else
+          para "No logo"
+        end
       end
       row :url do
         a supporting_organisation.url, href: supporting_organisation.url
       end
     end
+  end
+
+  index do
+    selectable_column
+    column :id
+    column :name
+    column :url
+    column :logo do |x|
+      if x.logo.attached?
+        image_tag(x.logo.variant(:thumb))
+      else
+        para "No logo"
+      end
+    end
+    column :created_at
+    column :updated_at
+    actions
   end
 
   # See permitted parameters documentation:

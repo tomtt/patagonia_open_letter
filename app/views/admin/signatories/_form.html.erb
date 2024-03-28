@@ -1,13 +1,12 @@
-<%= semantic_form_for [:admin, @supporting_organisation], builder: ActiveAdmin::FormBuilder do |f| %>
+<%= semantic_form_for [:admin, @signatory], builder: ActiveAdmin::FormBuilder do |f| %>
   <%= f.inputs do %>
     <%= f.input :name %>
-    <%= f.input :url %>
     <li>
       <label class="label">Current logo</label>
       <% if f.object.logo.attached? %>
-        <%= image_tag(f.object.logo.variant(:carousel)) %>
+        <%= image_tag(f.object.logo.variant(:signatory_list)) %>
       <% else %>
-          No logo
+        No logo
       <% end %>
     </li>
     <%= f.input :logo, as: :file, label: "Upload logo" %>

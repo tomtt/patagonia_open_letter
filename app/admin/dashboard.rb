@@ -14,7 +14,11 @@ ActiveAdmin.register_page "Dashboard" do
                   link_to(supporting_organisation.name, admin_supporting_organisation_path(supporting_organisation))
                 end
                 td do
-                  link_to(image_tag(supporting_organisation.logo.variant(:thumb), alt: "logo #{supporting_organisation.name}"), admin_supporting_organisation_path(supporting_organisation))
+                  if supporting_organisation.logo.attached?
+                    link_to(image_tag(supporting_organisation.logo.variant(:thumb), alt: "logo #{supporting_organisation.name}"), admin_supporting_organisation_path(supporting_organisation))
+                  else
+                    para "No logo"
+                  end
                 end
               end
             end
@@ -22,14 +26,19 @@ ActiveAdmin.register_page "Dashboard" do
         end
         panel "Signatories" do
           para "There are #{ Signatory.count } signatories"
-        end
-
-        panel "Letter Translations" do
-          para "There are #{ LetterTranslation.count } letter translations"
-          ul do
-            LetterTranslation.all.order(:language_name).map do |letter_translation|
-              li do
-                link_to("#{letter_translation.language_name} - #{letter_translation.language_code}", admin_letter_translation_path(letter_translation))
+          table do
+            Signatory.all.order(:name).map do |signatory|
+              tr do
+                td do
+                  link_to(signatory.name, admin_signatory_path(signatory))
+                end
+                td do
+                  if signatory.logo.attached?
+                    link_to(image_tag(signatory.logo.variant(:thumb), alt: "logo #{signatory.name}"), admin_signatory_path(signatory))
+                  else
+                    para "No logo"
+                  end
+                end
               end
             end
           end
@@ -47,6 +56,17 @@ ActiveAdmin.register_page "Dashboard" do
                 td do
                   content_block.content.truncate(80)
                 end
+              end
+            end
+          end
+        end
+
+        panel "Letter Translations" do
+          para "There are #{ LetterTranslation.count } letter translations"
+          ul do
+            LetterTranslation.all.order(:language_name).map do |letter_translation|
+              li do
+                link_to("#{letter_translation.language_name} - #{letter_translation.language_code}", admin_letter_translation_path(letter_translation))
               end
             end
           end

@@ -7,9 +7,29 @@
     <h2 class="mt-2">These organisations have signed their support for the make fishing fair open letter:</h2>
     <ul>
       <% @signatories.each do |signatory| %>
-        <li><%= signatory.name %></li>
+        <div class="signatory">
+          <div class="image">
+            <%= image_tag(signatory.logo.variant(:signatory_list), alt: "Logo for #{signatory.name}") if signatory.logo.attached? %>
+          </div>
+          <div class="name">
+            <%= signatory.name %>
+          </div>
+        </div>
       <% end %>
     </ul>
   </div>
 </div>
 
+<style>
+  .signatory .image {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+  }
+
+  .signatory .name {
+    padding-left: 1em;
+    display: inline-block;
+    vertical-align: top;
+  }
+</style>

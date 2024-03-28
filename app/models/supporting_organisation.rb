@@ -13,6 +13,8 @@ class SupportingOrganisation < ApplicationRecord
      attachable.variant :carousel, resize_to_limit: [350, 200], preprocessed: true
   end
 
+  scope :has_logo, -> { joins(:logo_attachment) }
+
   def admin_description
     name
   end
