@@ -1,38 +1,56 @@
-<div class="container-float shadow rounded text-muted full-page">
+<div class="container-float shadow rounded text-muted full-page" id="open-letter">
   <%= render partial: "header" %>
-  <div class="container content lg-offset-4 lg-col-10">
-    <div class="row">
-      <div class="col col-lg-8 offset-lg-2">
-        <div class="page-introduction">
-          <%= markdown_render(@page_introduction_content) %>
-        </div>
-      </div>
+  <div class="row page-introduction">
+    <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+      <%= markdown_render(@page_introduction_content) %>
     </div>
   </div>
-  <div class="open-letter-content">
+
+  <div class="container open-letter-content">
     <div class="row">
-      <div class="col col-lg-8 offset-lg-2">
+      <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
         <%= markdown_render(@open_letter_content) %>
       </div>
     </div>
   </div>
-  <div class="container content lg-offset-4 lg-col-10">
-    <div class="row">
-      <div class="col col-lg-8 offset-lg-2">
-        <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
-        <%= render partial: "signatories", locals: { signatories: @signatories } %>
-      </div>
-      <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
+  <div class="row after-letter">
+    <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+      <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
+      <%= render partial: "signatories", locals: { signatories: @signatories } %>
     </div>
+    <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
   </div>
 </div>
 <style>
-  .open-letter-content {
-    padding-top: 2em;
+  .page-introduction, .after-letter {
     color: white;
     background-color: #0000ff99;
-    height: 300px;
+    padding-top: 2em;
+  }
+  .open-letter-content {
+    padding-top: 2em;
+    height: 80vh;
     overflow-x: hidden;
     overflow-y: scroll;
+    background-color: #999;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    font-size: 120%;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    border-radius: 10px;
+  }
+
+  .full-page {
+    background: white;
+    // background: linear-gradient(rgba(0, 56, 141, 0.2), rgba(221, 175, 53, 0.2));
+  }
+
+  body {
+    background-color: white;
   }
 </style>

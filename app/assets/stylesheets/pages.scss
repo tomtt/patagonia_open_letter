@@ -30,7 +30,6 @@ header h1 {
 }
 
 .content {
-  margin-top: -80px;
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
@@ -38,14 +37,17 @@ header h1 {
   background-color: #f1f6f7ff;
 }
 
-.full-page {
-  background: #eee;
-  background: linear-gradient(rgba(0, 56, 141, 0.2), rgba(221, 175, 53, 0.2));
-}
-
 .letter-translations {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.open-letter-content {
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 1)
+  ),
+  image-url("fishing_backdrop_alt.jpg");
 }
 
 #letter-translations-accordion {
