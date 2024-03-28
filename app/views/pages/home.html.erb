@@ -8,18 +8,18 @@
 
   <div class="container open-letter-content">
     <div class="row">
-      <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+      <div class="col col-10 offset-1">
         <%= markdown_render(@open_letter_content) %>
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row the-ask">
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
       <%= markdown_render(@the_ask_content) %>
     </div>
   </div>
   <div class="row after-letter">
-    <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+    <div class="col col-10 offset-1 col-xl-8 offset-xl-2 trans-signatories">
       <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
     </div>
@@ -28,14 +28,30 @@
 </div>
 
 <style>
-  .page-introduction, .after-letter {
+.page-introduction{
+  color: white;
+  background-color: #0e77a8;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+  .after-letter {
     color: white;
-    background-color: #0000ff99;
+    background-color: #0e77a8;
     padding-top: 2em;
   }
-  .open-letter-content {
+
+  .the-ask {
     padding-top: 2em;
-    height: 80vh;
+    padding-bottom: 2em;
+  }
+
+  .trans-signatories {
+    padding-bottom: 2em;
+  }
+
+  .open-letter-content {
+    height: 70vh;
     overflow-x: hidden;
     overflow-y: scroll;
     background-color: #000;
@@ -45,14 +61,14 @@
     background-size: cover;
     color: white;
     font-size: 150%;
-    margin-top: 1em;
+    padding-top: 2em;
     margin-bottom: 1em;
     border-radius: 10px;
   }
 
   .full-page {
     background: white;
-    margin-bottom: 40px;
+    overflow-x: hidden;
   }
 
   body {
