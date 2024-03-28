@@ -12,4 +12,8 @@ class SupportingOrganisation < ApplicationRecord
      attachable.variant :original, preprocessed: true
      attachable.variant :carousel, resize_to_limit: [350, 200], preprocessed: true
   end
+
+  def admin_description
+    name
+  end
 end

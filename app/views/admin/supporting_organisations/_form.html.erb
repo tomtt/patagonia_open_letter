@@ -2,6 +2,9 @@
   <%= f.inputs do %>
     <%= f.input :name %>
     <%= f.input :url %>
+    <% if f.object.logo.attached? %>
+      <%= image_tag(f.object.logo.variant(:carousel)) %>
+    <% end %>
     <%= f.input :logo, as: :file %>
     <%= f.actions %>
   <% end %>
