@@ -22,7 +22,6 @@
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
       <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
-      <h2>Supporting organisations:</h2>
     </div>
     <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
   </div>
@@ -45,8 +44,7 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-
-    font-size: 120%;
+    font-size: 150%;
     margin-top: 1em;
     margin-bottom: 1em;
     border-radius: 10px;
@@ -54,7 +52,7 @@
 
   .full-page {
     background: white;
-    // background: linear-gradient(rgba(0, 56, 141, 0.2), rgba(221, 175, 53, 0.2));
+    margin-bottom: 40px;
   }
 
   body {
