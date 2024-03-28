@@ -17,10 +17,12 @@
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
       <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
+      <h2>Supporting organisations:</h2>
     </div>
     <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
   </div>
 </div>
+
 <style>
   .page-introduction, .after-letter {
     color: white;
