@@ -60,7 +60,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    font-size: 150%;
     padding-top: 2em;
     margin-bottom: 1em;
     border-radius: 10px;
@@ -97,6 +96,11 @@ header h1 {
 .letter-translations {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(255,0,255,1);
 }
 
 #letter-translations-accordion {
@@ -139,6 +143,23 @@ blockquote {
   img {
     vertical-align: middle;
   }
+}
+
+.signatory .image {
+  float: left;
+  width: 150px;
+  height: 150px;
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.signatory .name {
+  display: block;
+  vertical-align: top;
+}
+
+.clear {
+  clear: both;
 }
 
 .helper {
