@@ -18,4 +18,6 @@ class LetterTranslation < ApplicationRecord
 
   has_one_attached :pdf
   scope :has_pdf, -> { joins(:pdf_attachment) }
+  validates :language_name, presence: true
+  validates :language_code, presence: true
 end

@@ -6,4 +6,7 @@ class ContentBlock < ApplicationRecord
   def admin_description
     key
   end
+
+  validates :key, presence: true
+  validates :content, presence: true
 end

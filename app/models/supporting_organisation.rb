@@ -14,6 +14,7 @@ class SupportingOrganisation < ApplicationRecord
   end
 
   scope :has_logo, -> { joins(:logo_attachment) }
+  validates :name, presence: true
 
   def admin_description
     name
