@@ -1,15 +1,71 @@
 .parallax-header {
-  background: #fff;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.2),
-    rgba(255, 255, 255, 0.2)
-  ),
-  image-url("fishing_backdrop.jpg");
+  background: #0e77a8;
+  background: image-url("fishing_backdrop.jpg");
   background-position: top;
   background-size: auto 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 80vh;
+  height: 42vh;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .header-content h1:after {
+    content: " -sm"
+  }
+
+  .parallax-header {
+    height: 52vh !important;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .header-content h1:after {
+    content: " -md"
+  }
+  .parallax-header {
+    background-position-y: -60px !important;
+    height: 52vh !important;
+  }
+
+  .parallax-header .header-content {
+    margin-bottom: 3em !important;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .header-content h1:after {
+    content: " -lg"
+  }
+  .parallax-header {
+    background-position-y: -60px !important;
+    height: 62vh !important;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .header-content h1:after {
+    content: " -xl"
+  }
+  .parallax-header {
+    background-position-y: -110px !important;
+  }
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  .header-content h1:after {
+    content: " -xxl"
+  }
+
+  .parallax-header {
+    background-position-y: -180px !important;
+  }
 }
 
 .open-letter-content {
