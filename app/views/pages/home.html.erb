@@ -1,14 +1,14 @@
 <div class="container-float shadow rounded text-muted full-page" id="open-letter">
   <%= render partial: "header" %>
   <div class="row page-introduction">
-    <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+    <div class="col col-8 offset-2 col-md-6 offset-md-3">
       <%= markdown_render(@page_introduction_content) %>
     </div>
   </div>
 
   <div class="container open-letter-content">
     <div class="row">
-      <div class="col col-10 offset-1">
+      <div class="col col-8 offset-2">
         <%= markdown_render(@open_letter_content) %>
       </div>
     </div>
@@ -32,8 +32,8 @@
 .page-introduction{
   color: white;
   background-color: #0e77a8;
-  padding-top: 2em;
-  padding-bottom: 2em;
+  padding-top: 5em;
+  padding-bottom: 3em;
 }
 
   .after-letter {
@@ -62,7 +62,7 @@
     background-size: cover;
     color: white;
     padding-top: 2em;
-    margin-top: 1em;
+    margin-top: 3em;
     margin-bottom: 1em;
     border-radius: 10px;
   }
