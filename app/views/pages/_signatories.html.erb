@@ -5,16 +5,15 @@
       <button type="button" class="btn btn-primary">Email us to become a signatory</button>
     </a>
     <h2 class="mt-2">These organisations have signed their support for the make fishing fair open letter:</h2>
-    <% @signatories.each do |signatory| %>
-      <div class="signatory">
-        <div class="image">
+    <div class="signatories-list">
+      <% @signatories.each do |signatory| %>
+        <div class="signatory-image">
           <%= image_tag(signatory.logo.variant(:signatory_list), alt: "Logo for #{signatory.name}") if signatory.logo.attached? %>
         </div>
-        <div class="name">
+        <div class="signatory-name">
           <%= signatory.name %>
         </div>
-        <div class="clear"/>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
   </div>
 </div>

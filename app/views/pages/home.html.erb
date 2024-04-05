@@ -18,14 +18,15 @@
       <%= markdown_render(@the_ask_content) %>
     </div>
   </div>
+  
   <div class="row after-letter">
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2 trans-signatories">
       <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
     </div>
-    <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
   </div>
 </div>
+<%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
 
 <style>
 .page-introduction{
@@ -148,24 +149,18 @@ blockquote {
   }
 }
 
-.signatory .image {
-  float: left;
-  width: 150px;
-  height: 150px;
-  display: inline-block;
-  margin-right: 1em;
+.signatories-list {
+  display: grid;
+  grid-template-columns: 1fr 10fr;
+  column-gap: 0.5em;
+  row-gap: 0.5em;
 }
 
-.signatory .name {
-  display: block;
-  vertical-align: top;
+.signatory-image {
+  min-height: 150px;
 }
 
-.clear {
-  clear: both;
-}
-
-.helper {
+.helper { /* for vertical alignment in the carousel */
   display: inline-block;
   height: 100%;
   vertical-align: middle;
