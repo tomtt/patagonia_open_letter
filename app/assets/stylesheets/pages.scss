@@ -5,7 +5,7 @@
   background-size: auto 100vh;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 42vh;
+  height: 20em;
   display: flex;
   flex-direction: column-reverse;
   position: relative;
@@ -13,61 +13,71 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .header-content .breakpoint-info:after {
-    content: " -sm"
-  }
-
   .parallax-header {
-    height: 52vh !important;
+    height: 26em !important;
+
+    .breakpoint-info:after {
+      content: " -sm"
+    }
+
+    .header-content {
+      bottom: 25% !important;
+    }
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .header-content .breakpoint-info:after {
-    content: " -md"
-  }
   .parallax-header {
     background-position-y: -60px !important;
-    height: 52vh !important;
-  }
+    height: 26em !important;
 
-  .parallax-header .header-content {
-    margin-bottom: 3em !important;
+    .breakpoint-info:after {
+      content: " -md"
+    }
+
+    .header-content {
+      bottom: 20% !important;
+    }
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .header-content .breakpoint-info:after {
-    content: " -lg"
-  }
   .parallax-header {
-    background-position-y: -60px !important;
-    height: 62vh !important;
+    height: 30em !important;
+
+    .breakpoint-info:after {
+      content: " -lg"
+    }
+
+    .header-content {
+      bottom: 15% !important;
+    }
   }
-}
+}  
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .header-content .breakpoint-info:after {
-    content: " -xl"
-  }
   .parallax-header {
-    background-position-y: -110px !important;
+    height: 32em !important;
+
+    .breakpoint-info:after {
+      content: " -xl"
+    }
   }
-}
+}  
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-  .header-content .breakpoint-info:after {
-    content: " -xxl"
-  }
-
   .parallax-header {
-    background-position-y: -180px !important;
+    height: 35em !important;
+
+    .breakpoint-info:after {
+      content: " -xxl"
+    }
   }
-}
+}  
 
 .open-letter-content {
   background: linear-gradient(
