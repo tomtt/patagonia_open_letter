@@ -8,11 +8,12 @@
   height: 42vh;
   display: flex;
   flex-direction: column-reverse;
+  position: relative;
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
-  .header-content h1:after {
+  .header-content .breakpoint-info:after {
     content: " -sm"
   }
 
@@ -23,7 +24,7 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
-  .header-content h1:after {
+  .header-content .breakpoint-info:after {
     content: " -md"
   }
   .parallax-header {
@@ -38,7 +39,7 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .header-content h1:after {
+  .header-content .breakpoint-info:after {
     content: " -lg"
   }
   .parallax-header {
@@ -49,7 +50,7 @@
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-  .header-content h1:after {
+  .header-content .breakpoint-info:after {
     content: " -xl"
   }
   .parallax-header {
@@ -59,7 +60,7 @@
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
-  .header-content h1:after {
+  .header-content .breakpoint-info:after {
     content: " -xxl"
   }
 
