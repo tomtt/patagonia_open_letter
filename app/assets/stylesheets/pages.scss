@@ -72,6 +72,7 @@
 @media (min-width: 1400px) {
   .parallax-header {
     height: 35em !important;
+    background-position-y: -130px !important;
 
     .breakpoint-info:after {
       content: " -xxl"
