@@ -81,10 +81,6 @@
 }  
 
 .open-letter-content {
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.0),
-    rgba(0, 0, 0, 1)
-  ),
-  image-url("fishing_backdrop_alt.jpg");
+  background: image-url("fishing_backdrop_alt.jpg");
 }
 
