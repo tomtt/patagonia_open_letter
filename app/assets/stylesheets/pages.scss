@@ -13,12 +13,12 @@
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
+  .breakpoint-info:after {
+    content: " -sm"
+  }
+
   .parallax-header {
     height: 26em !important;
-
-    .breakpoint-info:after {
-      content: " -sm"
-    }
 
     .header-content {
       bottom: 25% !important;
@@ -28,13 +28,13 @@
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
+  .breakpoint-info:after {
+    content: " -md"
+  }
+
   .parallax-header {
     background-position-y: -60px !important;
     height: 26em !important;
-
-    .breakpoint-info:after {
-      content: " -md"
-    }
 
     .header-content {
       bottom: 20% !important;
@@ -44,12 +44,12 @@
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
+  .breakpoint-info:after {
+    content: " -lg"
+  }
+
   .parallax-header {
     height: 30em !important;
-
-    .breakpoint-info:after {
-      content: " -lg"
-    }
 
     .header-content {
       bottom: 15% !important;
@@ -59,24 +59,24 @@
 
 // X-Large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
+  .breakpoint-info:after {
+    content: " -xl"
+  }
+
   .parallax-header {
     height: 32em !important;
-
-    .breakpoint-info:after {
-      content: " -xl"
-    }
   }
 }  
 
 // XX-Large devices (larger desktops, 1400px and up)
 @media (min-width: 1400px) {
+  .breakpoint-info:after {
+    content: " -xxl"
+  }
+
   .parallax-header {
     height: 35em !important;
     background-position-y: -130px !important;
-
-    .breakpoint-info:after {
-      content: " -xxl"
-    }
   }
 }  
 
