@@ -1,5 +1,5 @@
 .parallax-header {
-  background-color: #0e77a8 !important;
+  background-color: #869891 !important;
   background: image-url("PORTUGAL_1.92.1.jpg");
   background-position: top;
   background-size: auto 100vh;
@@ -8,6 +8,7 @@
   height: 20em;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: center;
   position: relative;
 }
 
@@ -19,10 +20,6 @@
 
   .parallax-header {
     height: 26em !important;
-
-    .header-content {
-      bottom: 25% !important;
-    }
   }
 }
 
@@ -35,10 +32,6 @@
   .parallax-header {
     background-position-y: -60px !important;
     height: 26em !important;
-
-    .header-content {
-      bottom: 20% !important;
-    }
   }
 
   .open-letter-content {
@@ -55,10 +48,6 @@
 
   .parallax-header {
     height: 30em !important;
-
-    .header-content {
-      bottom: 15% !important;
-    }
   }
 }  
 
