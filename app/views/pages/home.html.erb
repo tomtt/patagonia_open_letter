@@ -118,10 +118,14 @@ header h1 {
   color: white;
 }
 
-.full-page button:hover, .full-page button.active {
+.full-page button:hover, .full-page .accordion-button:not(.collapsed) {
   background-image: linear-gradient(180deg, #668ca8, #85a3b9); /* calypso *
   /* background-image: linear-gradient(180deg, #e2c9a5, #e8d4b7); /* brandy * */
   color: white
+}
+
+.accordion-body {
+    background-color: #e5cfae;
 }
 
 #letter-translations-accordion {
