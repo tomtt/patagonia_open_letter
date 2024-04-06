@@ -36,14 +36,14 @@
 <style>
 .page-introduction{
   color: white;
-  background-color: #0e77a8;
+  background-color: #869891;
   padding-top: 5em;
   padding-bottom: 3em;
 }
 
   .after-letter {
     color: white;
-    background-color: #0e77a8;
+    background-color: #869891;
     padding-top: 2em;
   }
 
@@ -96,7 +96,7 @@
 
 header h1 {
   color: #dbbc8f;
-  text-shadow: 2px 2px #7e4016;
+  text-shadow: 1px 1px #7e4016;
 }
 
 .content {
@@ -112,16 +112,19 @@ header h1 {
   margin-bottom: 2em;
 }
 
-.accordion-button:focus {
-  box-shadow: none;
-  border-color: rgba(255,0,255,1);
+.full-page button {
+  background-image: linear-gradient(180deg, #406f92, #668ca8); /* calypso *
+  /* background-image: linear-gradient(180deg, #dbbc8f, #e2c9a5); /* brandy * */
+  color: white;
+}
+
+.full-page button:hover, .full-page button.active {
+  background-image: linear-gradient(180deg, #668ca8, #85a3b9); /* calypso *
+  /* background-image: linear-gradient(180deg, #e2c9a5, #e8d4b7); /* brandy * */
+  color: white
 }
 
 #letter-translations-accordion {
-  .accordion-button {
-    color: white;
-  }
-
   form.button_to {
     display: inline;
   }
