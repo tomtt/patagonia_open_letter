@@ -1,15 +1,5 @@
 .parallax-header {
-  background-color: #869891 !important;
   background: image-url("PORTUGAL_1.92.1.jpg");
-  background-position: top;
-  background-size: auto 100vh;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 20em;
-  display: flex;
-  flex-direction: column-reverse;
-  justify-content: center;
-  position: relative;
 }
 
 // Small devices (landscape phones, 576px and up)
@@ -22,10 +12,6 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
-  
-  .parallax-header {
-    height: 26em !important;
-  }
 }
 
 // Medium devices (tablets, 768px and up)
@@ -35,8 +21,7 @@
   }
 
   .parallax-header {
-    background-position-y: -60px !important;
-    height: 26em !important;
+    height: 25em !important;
   }
 }
 
@@ -70,7 +55,7 @@
 
   .parallax-header {
     height: 35em !important;
-    background-position-y: -130px !important;
+    // background-position-y: -130px !important;
   }
 }  
 
