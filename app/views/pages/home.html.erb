@@ -7,9 +7,9 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container-fluid open-letter-container">
   <div class="row">
-    <div class="col col-md-10 offset-md-1 open-letter-content">
+    <div class="col col-sm-8 offset-sm-2 open-letter-content">
       <div class="letter-frame p-4 p-lg-5">
         <%= markdown_render(@open_letter_content) %>
       </div>
@@ -17,7 +17,7 @@
   </div>
 </div>
 
-<div class="container-float rounded text-muted full-page" id="open-letter">
+<div class="container-fluid rounded text-muted full-page" id="open-letter">
   <div class="row the-ask">
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
       <%= markdown_render(@the_ask_content) %>
@@ -87,7 +87,7 @@
   }
 
   .full-page {
-    background: white;
+    background: #dbbc8f;
     overflow-x: hidden;
   }
 
@@ -108,12 +108,22 @@ header h1 {
   text-shadow: 1px 1px #7e4016;
 }
 
+.photo-credits {
+  position: absolute;
+  left: 1em;
+  color: #dbbc8f;
+}
+
 .content {
   padding-top: 1em;
   padding-left: 1em;
   padding-right: 1em;
   border-radius: 10px;
   background-color: #f1f6f7ff;
+}
+
+.open-letter-container {
+  background: linear-gradient(180deg, #869891, #dbbc8f);
 }
 
 .letter-translations {

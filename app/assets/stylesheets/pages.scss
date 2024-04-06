@@ -18,6 +18,11 @@
     content: " -sm"
   }
 
+  .open-letter-content {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  
   .parallax-header {
     height: 26em !important;
   }
@@ -32,11 +37,6 @@
   .parallax-header {
     background-position-y: -60px !important;
     height: 26em !important;
-  }
-
-  .open-letter-content {
-    margin-left: auto !important;
-    margin-right: auto !important;
   }
 }
 
