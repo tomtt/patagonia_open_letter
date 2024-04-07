@@ -48,10 +48,6 @@
   opacity: 75%;
 }
 
-@keyframes scroll-watcher {
-  to { width: 100%; }
-}
-
 .parallax-header {
   background-color: #869891 !important;
   background-position-x: 50%;
@@ -70,9 +66,15 @@
   animation-range: exit;
 }
 
-@keyframes image-parallax {
-  to { 
-    background-position-y: 200%;
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes image-parallax {
+    to { 
+      background-position-y: 200%;
+    }
+  }
+
+  @keyframes scroll-watcher {
+    to { width: 100%; }
   }
 }
 
