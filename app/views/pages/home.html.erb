@@ -1,3 +1,4 @@
+<div class="scroll-watcher"></div>
 <div class="container-float shadow rounded text-muted full-page" id="open-letter">
   <%= render partial: "header" %>
   <div class="row page-introduction">
@@ -34,6 +35,22 @@
 <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
 
 <style>
+
+.scroll-watcher {
+  height: 10px;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  background-color: #406f92;
+  width: 0%;
+  animation: scroll-watcher linear;
+  animation-timeline: scroll();
+  opacity: 50%;
+}
+
+@keyframes scroll-watcher {
+  to { width: 100%; }
+}
 
 .parallax-header {
   background-color: #869891 !important;
