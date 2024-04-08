@@ -85,7 +85,7 @@
   .page-introduction{
     color: #f4e9da;
     background-color: #869891;
-    padding-top: 5em;
+    padding-top: 3em;
     padding-bottom: 3em;
   }
 
@@ -113,7 +113,7 @@
     padding-bottom: 2em;
   }
 
-  .full-page .parallax-header button {
+  .full-page .parallax-header button, .signatories-section button {
     display: block;
     margin: 0 auto 2em auto;
     margin-top: 2em;
@@ -121,6 +121,12 @@
     background-image: linear-gradient(180deg, #7e4016, #8f5127);
     border: solid 1px #dbbc8f;
   }
+
+  .full-page button:hover{
+    background-image: linear-gradient(180deg, #986645, #8f5127); /* calypso */
+    border: solid 1px #dbbc8f;
+  }
+
 
   .open-letter-content {
     height: 70vh;
@@ -192,18 +198,6 @@
   color: #e8d4b7;
 }
 
-.full-page button {
-  background-image: linear-gradient(180deg, #406f92, #668ca8); /* calypso *
-  /* background-image: linear-gradient(180deg, #dbbc8f, #e2c9a5); /* brandy * */
-  color: white;
-}
-
-.full-page button:hover, .full-page .accordion-button:not(.collapsed) {
-  background-image: linear-gradient(180deg, #668ca8, #85a3b9); /* calypso *
-  /* background-image: linear-gradient(180deg, #e2c9a5, #e8d4b7); /* brandy * */
-  color: white
-}
-
 .accordion-body {
     background-color: #e5cfae;
 }
@@ -238,6 +232,11 @@ blockquote {
   p {
     margin-bottom: 0;
   }
+}
+
+blockquote:first-of-type {
+  font-size: 200%;
+  margin-bottom: 1em;
 }
 
 .logo-image-container {
