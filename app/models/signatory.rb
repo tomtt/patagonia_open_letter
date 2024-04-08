@@ -13,5 +13,5 @@ class Signatory < ApplicationRecord
      attachable.variant :signatory_list, resize_to_limit: [150, 150], preprocessed: true
   end
 
-  validates :name, presence: true
+  validates :name, presence: true, uniqueness: true
 end
