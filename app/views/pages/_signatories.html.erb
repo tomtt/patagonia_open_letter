@@ -1,23 +1,18 @@
 <div class="row">
   <div class="col">
-    <p>About signatories: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris posuere, tellus sed aliquet tristique, orci dolor consequat nunc, eget placerat tellus lectus sed erat. Donec scelerisque, dui et dapibus sollicitudin, tortor magna lacinia metus, sit amet efficitur metus erat in justo.</p>
-    <a href="mailto:info@makefishingfair.org?subject=Why we would like to become a make fishing fair signatory"
+    <a href="mailto:elsa.pullman@blueventures.org?subject=Why we would like to become a make fishing fair signatory"
        style="text-decoration: none"
        target="_"
        aria-label="Link to email to become a signatory"
     >
       <button type="button" class="btn btn-primary wide-button page-button">Sign the letter</button>
     </a>
-    <h2 class="mt-2">These organisations have signed their support for the make fishing fair open letter:</h2>
-    <div class="signatories-list">
+
+    <h2 class="mt-2">This letter is signed by:</h2>
+    <ul>
       <% @signatories.each do |signatory| %>
-        <div class="signatory-image">
-          <%= image_tag(signatory.logo.variant(:signatory_list), alt: "Logo for #{signatory.name}") if signatory.logo.attached? %>
-        </div>
-        <div class="signatory-name">
-          <%= signatory.name %>
-        </div>
+        <li><%= signatory.name %></li>
       <% end %>
-    </div>
+    </ul>
   </div>
 </div>

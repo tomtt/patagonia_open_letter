@@ -24,10 +24,14 @@
       <%= markdown_render(@the_ask_content) %>
     </div>
   </div>
-  
+  <div class="row translations">
+    <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
+      <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
+    </div>
+  </div>
+
   <div class="row after-letter">
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2 trans-signatories">
-      <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
     </div>
   </div>
@@ -78,30 +82,35 @@
   }
 }
 
-.page-introduction{
-  color: white;
-  background-color: #869891;
-  padding-top: 5em;
-  padding-bottom: 3em;
-}
+  .page-introduction{
+    color: #f4e9da;
+    background-color: #869891;
+    padding-top: 5em;
+    padding-bottom: 3em;
+  }
+
+  .header-button {
+    width: fit-content;
+    margin: 0 auto;
+  }
 
   .after-letter {
-    color: white;
+    color: #f4e9da;
     background-color: #869891;
     padding-top: 2em;
   }
 
   .the-ask {
     padding-top: 2em;
-    padding-bottom: 2em;
+    padding-bottom: 1em;
+  }
+
+  .translations {
+    padding-bottom: 3em;
   }
 
   .trans-signatories {
     padding-bottom: 2em;
-  }
-
-  .letter-frame {
-    background-color: rgba(0, 0, 0, 0.6);
   }
 
   .full-page .parallax-header button {
@@ -115,16 +124,14 @@
 
   .open-letter-content {
     height: 70vh;
+    background-color: #ffffff7f;
     overflow-x: hidden;
+    overflow-x: clip;
     overflow-y: scroll;
-    background-size: auto 100vh;
-    background-repeat: no-repeat;
-    color: white;
+    color: #04141f;
     margin-top: 3em;
     margin-bottom: 1em;
     border-radius: 20px;
-    background-position-x: center;
-    background-position-y: center;
     padding: 0;
     margin-left: 1em;
     margin-right: 1em;
@@ -133,6 +140,7 @@
   .full-page {
     background: #dbbc8f;
     overflow-x: hidden;
+    overflow-x: clip;
   }
 
   .parallax-header h1 {
@@ -174,6 +182,14 @@
 .letter-translations {
   margin-top: 2em;
   margin-bottom: 2em;
+}
+
+.bright-links a, .bright-links a:visited, .bright-links a:link {
+  color: #dbbc8f;
+}
+
+.bright-links a:hover {
+  color: #e8d4b7;
 }
 
 .full-page button {
