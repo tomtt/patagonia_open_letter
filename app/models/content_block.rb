@@ -7,6 +7,6 @@ class ContentBlock < ApplicationRecord
     key
   end
 
-  validates :key, presence: true
+  validates :key, presence: true, uniqueness: true
   validates :content, presence: true
 end
