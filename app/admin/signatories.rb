@@ -16,6 +16,7 @@ ActiveAdmin.register Signatory do
   index do
     selectable_column
     column :id
+    column :position
     column :name
     column :logo do |x|
       if x.logo.attached?
@@ -31,6 +32,7 @@ ActiveAdmin.register Signatory do
 
   show do
     attributes_table do
+      row :position
       row :name
       row :logo do |x|
         if x.logo.attached?

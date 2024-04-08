@@ -1,4 +1,6 @@
 class Signatory < ApplicationRecord
+  acts_as_list
+
   def self.ransackable_attributes(auth_object = nil)
     ["created_at", "id", "id_value", "name", "position", "updated_at"]
   end

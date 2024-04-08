@@ -1,10 +1,11 @@
 ActiveAdmin.register SupportingOrganisation do
-  permit_params :name, :url, :logo
+  permit_params :position, :name, :url, :logo
 
   form partial: 'form'
 
   show do
     attributes_table do
+      row :position
       row :name
       row :logo do |x|
         if x.logo.attached?
@@ -22,6 +23,7 @@ ActiveAdmin.register SupportingOrganisation do
   index do
     selectable_column
     column :id
+    column :position
     column :name
     column :url
     column :logo do |x|
