@@ -17,6 +17,7 @@ ActiveAdmin.register SupportingOrganisation do
       row :url do
         a supporting_organisation.url, href: supporting_organisation.url
       end
+      row :image_max_height
     end
   end
 
@@ -33,6 +34,7 @@ ActiveAdmin.register SupportingOrganisation do
         para "No logo"
       end
     end
+    column :image_max_height
     column :created_at
     column :updated_at
     actions
