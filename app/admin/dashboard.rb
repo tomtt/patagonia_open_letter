@@ -15,7 +15,10 @@ ActiveAdmin.register_page "Dashboard" do
                 end
                 td do
                   if supporting_organisation.logo.attached?
-                    link_to(image_tag(supporting_organisation.logo.variant(:thumb), alt: "logo #{supporting_organisation.name}"), admin_supporting_organisation_path(supporting_organisation))
+                    link_to(
+                      image_tag(supporting_organisation.logo.variant(:thumb), alt: "logo #{supporting_organisation.name}"),
+                      rails_blob_path(supporting_organisation.logo, disposition: "attachment")
+                    )
                   else
                     para "No logo"
                   end
