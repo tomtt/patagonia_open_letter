@@ -2,7 +2,7 @@ class SupportingOrganisation < ApplicationRecord
   acts_as_list
 
   def self.ransackable_attributes(auth_object = nil)
-    ["created_at", "id", "id_value", "name", "position", "url", "updated_at"]
+    ["created_at", "id", "id_value", "name", "position", "url", "image_max_height", "updated_at"]
   end
 
   def self.ransackable_associations(auth_object = nil)
@@ -17,8 +17,13 @@ class SupportingOrganisation < ApplicationRecord
 
   scope :has_logo, -> { joins(:logo_attachment) }
   validates :name, presence: true, uniqueness: true
+  validates :image_max_height, numericality: {in: 0..200}
 
   def admin_description
     name
+  end
+
+  def image_max_height_safe
+    image_max_height || 200
   end
 end

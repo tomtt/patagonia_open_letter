@@ -1,6 +1,5 @@
 <%= semantic_form_for [:admin, @supporting_organisation], builder: ActiveAdmin::FormBuilder do |f| %>
   <%= f.inputs do %>
-    <%= f.input :position %>
     <%= f.input :name %>
     <%= f.input :url %>
     <li>
@@ -12,6 +11,8 @@
       <% end %>
     </li>
     <%= f.input :logo, as: :file, label: "Upload logo" %>
+    <%= f.input :position %>
+    <%= f.input :image_max_height %>
     <%= f.actions %>
   <% end %>
 <% end %>

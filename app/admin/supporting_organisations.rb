@@ -1,5 +1,5 @@
 ActiveAdmin.register SupportingOrganisation do
-  permit_params :position, :name, :url, :logo
+  permit_params :position, :name, :url, :logo, :image_max_height
 
   form partial: 'form'
 

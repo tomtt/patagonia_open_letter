@@ -7,6 +7,7 @@
         image_tag(
           supporting_organisation.logo.variant(:carousel),
           class: "logo-image",
+          style: "max-height: #{supporting_organisation.image_max_height_safe}px;",
           alt: "logo #{supporting_organisation.name}"
         )
       ].join.html_safe,
