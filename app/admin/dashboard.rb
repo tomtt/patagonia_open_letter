@@ -8,7 +8,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Supporting Organisations" do
           para "There are #{ SupportingOrganisation.count } supporting organisations"
           table do
-            SupportingOrganisation.all.order(:name).map do |supporting_organisation|
+            SupportingOrganisation.all.order(:position).map do |supporting_organisation|
               tr do
                 td do
                   link_to(supporting_organisation.name, admin_supporting_organisation_path(supporting_organisation))
@@ -30,7 +30,7 @@ ActiveAdmin.register_page "Dashboard" do
         panel "Signatories" do
           para "There are #{ Signatory.count } signatories"
           table do
-            Signatory.all.order(:name).map do |signatory|
+            Signatory.all.order(:position).map do |signatory|
               tr do
                 td do
                   link_to(signatory.name, admin_signatory_path(signatory))
