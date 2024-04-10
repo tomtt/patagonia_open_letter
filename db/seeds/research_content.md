@@ -1,0 +1,2 @@
+- [Research paper 1](https://makefishingfair.org/papers1)
+- [Research paper 2](https://makefishingfair.org/papers2)
