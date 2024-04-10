@@ -33,9 +33,10 @@
       <%= markdown_render(@the_ask_content) %>
     </div>
   </div>
-  <div class="row translations">
+  <div class="row below-letter">
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2">
       <%= render partial: "letter_translations", locals: { letter_translations: @letter_translations } %>
+      <%= markdown_render(@research_content) %>
     </div>
   </div>
 
@@ -113,7 +114,7 @@
     padding-bottom: 1em;
   }
 
-  .translations {
+  .below-letter {
     padding-bottom: 3em;
   }
 
