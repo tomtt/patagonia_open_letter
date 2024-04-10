@@ -1,5 +1,5 @@
 <div class="letter-translations">
-  You can download the letter in
+  Get the letter in
   <%= 
     @letter_translations.map do |letter_translation|
       link_to(letter_translation.language_name, rails_blob_path(letter_translation.pdf, disposition: "attachment"))
