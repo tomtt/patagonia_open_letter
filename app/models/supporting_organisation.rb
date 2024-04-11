@@ -17,7 +17,7 @@ class SupportingOrganisation < ApplicationRecord
 
   scope :has_logo, -> { joins(:logo_attachment) }
   validates :name, presence: true, uniqueness: true
-  validates :image_max_height, numericality: {in: 0..200}
+  validates :image_max_height, numericality: {in: 0..200}, allow_nil: true
 
   def admin_description
     name
