@@ -9,8 +9,4 @@ class PagesController < ApplicationController
     @signatories = Signatory.all.order(:position)
     @letter_translations = LetterTranslation.all.order(:language_name).has_pdf
   end
-
-  def supporting_organisations
-    @supporting_organisations = SupportingOrganisation.all
-  end
 end
