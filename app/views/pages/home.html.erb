@@ -37,16 +37,42 @@
   </div>
 
   <div class="row after-letter">
+    <div class="col col-10 offset-1 col-xl-8 offset-xl-2 responsive-iframe-container">
+      <iframe 
+        class="responsive-iframe"
+        src="https://www.youtube.com/embed/pkYCfBWysHQ?si=v4kIocFe4AcimiSd"
+        title="video: Low impact fishers call on the EU to #MakeFishingFair"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+      </iframe>
+    </div>
     <div class="col col-10 offset-1 col-xl-8 offset-xl-2 trans-signatories">
       <%= render partial: "signatories", locals: { signatories: @signatories } %>
       <%= markdown_render(@research_content) %>
-
     </div>
   </div>
 </div>
 <%= render partial: "supporting_organisations_carousel", locals: { supporting_organisations: @supporting_organisations } %>
 
 <style>
+.responsive-iframe-container {
+  position: relative;
+  overflow: hidden;
+  padding-top: 37.5%;
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
 .scroll-watcher {
   height: 4px;
   position: fixed;
